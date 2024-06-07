@@ -1,7 +1,7 @@
 '''
 ======================
 By: Gr8P0tat0
-Last Modified: 04JUN24
+Last Modified: 07JUN24
 ======================
 nighthawk_groups = {
     "Nighthawk Combat Engineers": 4809530,
@@ -322,15 +322,21 @@ nighthawk_group_ranks = {
 
 import requests
 
-target_users = ["41uis", "Expiral", "daxlovescars", 'Acrynax', 'finalnickADD', 'Kurashina_lzumi', 'vTakina', 'Te0Void', 'Tim_NightShade', 'Caonalyst', 'snellejelte', 'Guy_Broman', 'ReiAstra', 'flem_sy', 'JBF3', 'KolegaPolakYT', 'Pieface1091']
+perm_spectre_targets = ["41uis", "Expiral", "daxlovescars", 'Acrynax', 'finalnickADD', 'Kurashina_lzumi', 'vTakina', 'Te0Void', 'Tim_NightShade', 'Caonalyst', 'snellejelte', 'Guy_Broman', 'ReiAstra', 'flem_sy', 'JBF3', 'KolegaPolakYT', 'Pieface1091']
 
-groups_of_interest = {
+phantom_spectre_targets = ["RisenVezyr"]
+
+perm_spectre_groups = {
     "Nighthawk Combat Engineers: Leviathan": 33391710,
-    "Nighthawk Imperial Peacekeeper Corps": 4543661,
-    "Nighthawk Manticore": 15026315
+    "Nighthawk Imperial Peacekeeper Corps": 4543661
 }
 
-roles_of_interest = {
+phantom_spectre_groups = {
+    "Nighthawk Combat Engineers: Leviathan": 33391710, #in morph
+    "Nighthawk Manticore": 15026315 #any manticore, doesn't have to be in morph
+}
+
+perm_spectre_roles = {
     # Nighthawk Military Police: Cerberus
     4486074: [
         "| O | Drill Sergeant",
@@ -346,7 +352,7 @@ roles_of_interest = {
         "| X | Commander",
         "| X | Viceroy"
     ],
-      # Nighthawk Manticore
+    # Nighthawk Manticore
     15026315: [
         "Operative",
         "Senior Operative",
@@ -432,6 +438,10 @@ roles_of_interest = {
     ]
 }
 
+phantom_spectre_roles = {
+
+}
+
 def search_users(keyword):
     print("-" * 40)
     url = f"https://users.roblox.com/v1/users/search?keyword={keyword}&limit=100"
@@ -448,12 +458,19 @@ def search_users(keyword):
                 print(f"Username: {user['name']}, DisplayName: {user['displayName']}, Id: {user['id']}")
                 print("-" * 40)
                 is_target = False
+                hit_type = None
 
-                if user['name'].lower() in [u.lower() for u in target_users]:
-                    print(f"{user['name']}, Permanent Hit")
+                if user['name'].lower() in [u.lower() for u in perm_spectre_targets]:
+                    print(f"{user['name']} | Permanent Hit")
                     is_target = True
+                    hit_type = "Permanent Hit"
 
-                fetch_user_groups(user['id'], user['name'], is_target)
+                if user['name'].lower() in [u.lower() for u in phantom_spectre_targets]:
+                    print(f"{user['name']} | Phantom Assigned")
+                    is_target = True
+                    hit_type = "Phantom Assigned"
+
+                fetch_user_groups(user['id'], user['name'], is_target, hit_type)
                 break
 
         if not found_user:
@@ -462,7 +479,7 @@ def search_users(keyword):
     else:
         print(f"Failed to retrieve users: {response.status_code}")
 
-def fetch_user_groups(user_id, username, is_target):
+def fetch_user_groups(user_id, username, is_target, hit_type):
     url = f"https://groups.roblox.com/v1/users/{user_id}/groups/roles"
     response = requests.get(url)
 
@@ -475,12 +492,20 @@ def fetch_user_groups(user_id, username, is_target):
             group_name = group['group']['name']
             role_name = group['role']['name']
 
-            if group_id in groups_of_interest.values():
-                print(f"{group_name}, {username} | Permanent Hit")
+            if group_id in perm_spectre_groups.values():
+                print(f"{group_name}, {username} | {hit_type if hit_type else 'Permanent Hit'}")
                 is_target = True
 
-            if group_id in roles_of_interest and role_name in roles_of_interest[group_id]:
-                print(f"{group_name}, {role_name}, {username} | Permanent Hit")
+            if group_id in phantom_spectre_groups.values():
+                print(f"{group_name}, {username} | {hit_type if hit_type else 'Phantom Assigned'}")
+                is_target = True
+
+            if group_id in perm_spectre_roles and role_name in perm_spectre_roles[group_id]:
+                print(f"{group_name}, {role_name}, {username} | {hit_type if hit_type else 'Permanent Hit'}")
+                is_target = True
+
+            if group_id in phantom_spectre_roles and role_name in phantom_spectre_roles[group_id]:
+                print(f"{group_name}, {role_name}, {username} | {hit_type if hit_type else 'Phantom Assigned'}")
                 is_target = True
 
         if not is_target:
