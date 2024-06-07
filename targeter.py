@@ -1,7 +1,7 @@
 '''
 ======================
 By: Gr8P0tat0
-Last Modified: 06JUN24
+Last Modified: 04JUN24
 ======================
 nighthawk_groups = {
     "Nighthawk Combat Engineers": 4809530,
@@ -326,7 +326,8 @@ target_users = ["41uis", "Expiral", "daxlovescars", 'Acrynax', 'finalnickADD', '
 
 groups_of_interest = {
     "Nighthawk Combat Engineers: Leviathan": 33391710,
-    "Nighthawk Imperial Peacekeeper Corps": 4543661
+    "Nighthawk Imperial Peacekeeper Corps": 4543661,
+    "Nighthawk Manticore": 15026315
 }
 
 roles_of_interest = {
