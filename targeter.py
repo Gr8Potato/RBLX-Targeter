@@ -1,7 +1,7 @@
 '''
 ======================
 By: Gr8P0tat0
-Last Modified: 04JUN24
+Last Modified: 06JUN24
 ======================
 nighthawk_groups = {
     "Nighthawk Combat Engineers": 4809530,
@@ -373,7 +373,6 @@ roles_of_interest = {
     3497000: [
         "Royal Officer",
         "High Command",
-        "Developer",
         "Director",
         "Overseer",
         "Administration",
@@ -394,7 +393,6 @@ roles_of_interest = {
         "Commandant",
         "Advisor",
         "Deputy Director",
-        "Developer",
         "Director",
         "Overseer",
         "Administration",
@@ -405,7 +403,6 @@ roles_of_interest = {
     3497030: [
         "| HC | Chief Superintendent",
         "| HC | Deputy Chief",
-        "| X | Developer",
         "| C | Chief",
         "| X | Overseer",
         "| X | Commander",
@@ -416,7 +413,6 @@ roles_of_interest = {
     4734688: [
         "Arbiter",
         "Warden",
-        "Developer",
         "Director",
         "Overseer",
         "Commander",
@@ -427,7 +423,6 @@ roles_of_interest = {
     3612873: [
         "C | Council",
         "C | Consul",
-        "X | Developer",
         "Forerunner",
         "Overseer",
         "Administration",
