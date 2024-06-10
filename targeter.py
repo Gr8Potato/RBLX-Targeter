@@ -1,7 +1,7 @@
 '''
 ======================
 By: Gr8P0tat0
-Last Modified: 07JUN24
+Last Modified: 10JUN24
 ======================
 '''
 
@@ -17,7 +17,6 @@ perm_spectre_groups = {
 }
 
 phantom_spectre_groups = {
-    "Nighthawk Combat Engineers: Leviathan": 33391710, #in morph
     "Nighthawk Manticore": 15026315 #any manticore, doesn't have to be in morph
 }
 
