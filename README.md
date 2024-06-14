@@ -28,7 +28,7 @@ There are two ways I've used the tool:
 - **Running Locally** - This is the way I do it now due to performance improvements and bypassing the harsh rate limiting Roblox has set for external, naked API calls. You can run `targeter+.py` or `targeter.py`, but the latter will impose the aforementioned restrictions.
 
 > [!NOTE]
-> You will need to install the Python `requests` package in order to use either program. To install it, execute `pip install --user requests` in either Command Prompt, PowerShell, or Bash terminal.
+> You will need to install the Python `requests` package in order to use either program. To install it, execute `pip install --user requests` in either Command Prompt, PowerShell, or Bash terminal. Also, make sure you have Python installed on your system (I made this in version `3.12.3`).
 
 
 ## Updating the Tool
