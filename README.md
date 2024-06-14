@@ -2,6 +2,16 @@
 
 RBLX Targeter is a tool designed to identify whether a user is a Red Cell Spectre target in the Roblox roleplaying game, **The Grand Crossing**. It leverages the [Users](https://users.roblox.com/docs/index.html) and [Groups](https://groups.roblox.com/docs/index.html) web APIs to perform its checks.
 
+## Contributors
+
+<div style="display: inline-block; text-align: center;">
+  <a href="https://www.roblox.com/users/291119265/profile">
+    <img src="media/images/Gr8P0tat0.png" alt="Gr8P0tat0 Profile Icon">
+  </a>
+  <br>
+  <strong>Gr8P0tat0</strong>
+</div>
+
 
 ## Updating the Tool
 
@@ -21,16 +31,6 @@ Roblox imposes strict rate limits on their APIs. Currently there's a delay betwe
 
     [!WARNING]  
     **DO NOT SHARE THIS COOKIE WITH OTHERS** (it literally tells you not to in the cookie).
-
-## Contributors
-
-<div style="display: inline-block; text-align: center;">
-  <a href="https://www.roblox.com/users/291119265/profile">
-    <img src="media/images/Gr8P0tat0.png" alt="Gr8P0tat0 Profile Icon">
-  </a>
-  <br>
-  <strong>Gr8P0tat0</strong>
-</div>
 
 ---
 
