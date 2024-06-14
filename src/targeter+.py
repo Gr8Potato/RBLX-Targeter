@@ -1,3 +1,10 @@
+'''
+======================
+By: Gr8P0tat0
+Last Modified: 14JUN24
+======================
+'''
+
 import requests
 import time
 import sys
