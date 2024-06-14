@@ -1,4 +1,6 @@
 '''
+Just something I use for reference.
+
 nighthawk_groups = {
     "Nighthawk Combat Engineers": 4809530,
     "Nighthawk Combat Engineers: Leviathan": 33391710,
