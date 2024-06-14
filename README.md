@@ -21,14 +21,14 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell Spectr
 
 ## Using the Tool
 
-There's two ways I've used the tool:
+There are two ways I've used the tool:
 
 - **Google Colab** - This was the way I originally did it and is far easier to set up. You can create a Google Colab or Jupyter Notebook instance and copy + paste `targeter.py` into a code cell.
 
 - **Running Locally** - This is the way I do it now due to performance improvements and bypassing the harsh rate limiting Roblox has set for external, naked API calls. You can run `targeter+.py` or `targeter.py`, but the latter will impose the aforementioned restrictions.
 
-    [!NOTE]
-    You will need to install the python `requests` package in order to use either program. To install it, execute `pip install --user requests` in either Command Prompt, PowerShell, or Bash terminal.
+> [!NOTE]
+> You will need to install the Python `requests` package in order to use either program. To install it, execute `pip install --user requests` in either Command Prompt, PowerShell, or Bash terminal.
 
 
 ## Updating the Tool
@@ -37,18 +37,18 @@ I don’t plan to maintain this indefinitely, but you can easily keep it current
 
 ## Rate Limiting
 
-Roblox imposes strict rate limits on their APIs. Currently there's a delay between how many searches you can make in a given time (60 seconds). Here are some potential workarounds:
+Roblox imposes strict rate limits on their APIs. Currently, there's a delay between how many searches you can make in a given time (60 seconds). Here are some potential workarounds:
 
 - **Rotating Proxies**: Host the program through a rotating proxy service to spoof your IP. This will cost you if you're not using multiple free proxies.
-- **Targeter+**: Another version made for increased performance and significantly alleviates the built in rate limiting.
+- **Targeter+**: Another version made for increased performance and significantly alleviates the built-in rate limiting.
 
     In order to bypass the rate limit via Targeter+, you must provide a `.ROBLOSECURITY` cookie during the program's runtime. To find cookies for most Chrome/Chromium browsers, `F12/Ctrl + Shift + I > Application > Cookies > ...roblox.com...`.
 
-    [!NOTE]
-    You will need to get a new cookie each time you log out (i.e.: when the cookie expires).
+> [!NOTE]
+> You will need to get a new cookie each time you log out (i.e.: when the cookie expires).
 
-    [!WARNING]  
-    **DO NOT SHARE THIS COOKIE WITH OTHERS** (it literally tells you not to in the cookie).
+> [!WARNING]  
+> **DO NOT SHARE THIS COOKIE WITH OTHERS** (it tells you not to put it in the cookie).
 
 ---
 
