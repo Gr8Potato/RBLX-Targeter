@@ -178,6 +178,10 @@ def fetch_user_groups(session, user_id, username, is_target, use_countdown):
                 print(f"{group_name}, {role_name}, {username} | Phantom Assigned")
                 is_target = True
 
+        if not in_nighthawk_imperium:
+            is_target = False
+            print(f"{username} is not in The Nighthawk Imperium. Not a target. Are you sure you typed the name in correctly?")
+
         if not is_target:
             print(f"No target roles or groups of interest found for User ID {user_id}.")
     else:

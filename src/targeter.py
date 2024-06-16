@@ -1,10 +1,3 @@
-'''
-======================
-By: Gr8P0tat0
-Last Modified: 14JUN24
-======================
-'''
-
 import requests
 import time
 import sys
@@ -166,11 +159,15 @@ def fetch_user_groups(user_id, username, is_target):
     if response.status_code == 200:
         data = response.json()
         groups = data.get('data', [])
+        in_nighthawk_imperium = False
 
         for group in groups:
             group_id = group['group']['id']
             group_name = group['group']['name']
             role_name = group['role']['name']
+
+            if group_id == 1174414:  # Check for Nighthawk Imperium
+                in_nighthawk_imperium = True
 
             if group_id in perm_spectre_groups.values():
                 print(f"{group_name}, {username} | Permanent Hit")
@@ -187,6 +184,10 @@ def fetch_user_groups(user_id, username, is_target):
             if group_id in phantom_spectre_roles and role_name in phantom_spectre_roles[group_id]:
                 print(f"{group_name}, {role_name}, {username} | Phantom Assigned")
                 is_target = True
+
+        if not in_nighthawk_imperium:
+            is_target = False
+            print(f"{username} is not in The Nighthawk Imperium. Not a target. Are you sure you typed the name in correctly?")
 
         if not is_target:
             print(f"No target roles or groups of interest found for User ID {user_id}.")
