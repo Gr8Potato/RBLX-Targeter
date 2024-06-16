@@ -211,6 +211,10 @@ def countdown(seconds):
         time.sleep(1)
     print("\r")
 
+def clear_terminal():
+    sys.stdout.write("\033[H\033[J")
+    sys.stdout.flush()
+
 if __name__ == "__main__":
     session = requests.Session()
     print("=" * 40)
@@ -219,6 +223,9 @@ if __name__ == "__main__":
     use_countdown = not cookie
     if cookie:
         session.headers.update({'Cookie': f'.ROBLOSECURITY={cookie}'})
+        clear_terminal()
+        print("=" * 40)
+
     while True:
         search_term = input("Enter user: ")
         search_users(session, search_term, use_countdown)
