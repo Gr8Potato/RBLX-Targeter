@@ -166,7 +166,7 @@ def fetch_user_groups(user_id, username, is_target):
             group_name = group['group']['name']
             role_name = group['role']['name']
 
-            if group_id == 1174414:  # Check for Nighthawk Imperium
+            if group_id == 1174414:
                 in_nighthawk_imperium = True
 
             if group_id in perm_spectre_groups.values():
