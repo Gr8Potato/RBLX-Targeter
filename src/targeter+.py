@@ -157,6 +157,8 @@ def fetch_user_groups(session, user_id, username, is_target, use_countdown):
         data = response.json()
         groups = data.get('data', [])
 
+        in_nighthawk_imperium = False
+
         for group in groups:
             group_id = group['group']['id']
             group_name = group['group']['name']
