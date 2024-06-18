@@ -1,3 +1,10 @@
+'''
+======================
+By: Gr8P0tat0
+Last Modified: 17JUN24
+======================
+'''
+
 import requests
 import time
 import sys
@@ -11,11 +18,10 @@ perm_spectre_groups = {
 }
 
 phantom_spectre_groups = {
-    "Nighthawk Manticore": 15026315 # any manticore, doesn't have to be in morph
+    "Nighthawk Manticore": 15026315
 }
 
 perm_spectre_roles = {
-    # Nighthawk Military Police: Cerberus
     4486074: [
         "| O | Drill Sergeant",
         "| O | Ultra",
@@ -30,7 +36,6 @@ perm_spectre_roles = {
         "| X | Commander",
         "| X | Viceroy"
     ],
-    # Nighthawk Manticore
     15026315: [
         "Operative",
         "Senior Operative",
@@ -45,7 +50,6 @@ perm_spectre_roles = {
         "Administration",
         "Viceroy"
     ],
-    # Nighthawk Imperium
     1174414: [
         "| C | Commodore",
         "| HC | Admiral",
@@ -54,7 +58,6 @@ perm_spectre_roles = {
         "| X | Commander",
         "| X | Viceroy"
     ],
-    # Nighthawk Royal Guards
     3497000: [
         "Royal Officer",
         "High Command",
@@ -64,7 +67,6 @@ perm_spectre_roles = {
         "Commander",
         "Viceroy"
     ],
-    # Nighthawk Combat Engineers
     4809530: [
         "| HC | Ordinatus",
         "| HC | Praefectus",
@@ -73,7 +75,6 @@ perm_spectre_roles = {
         "| X | Administration",
         "| X | Viceroy"
     ],
-    # Nighthawk Commandos
     3496996: [
         "Commandant",
         "Advisor",
@@ -84,7 +85,6 @@ perm_spectre_roles = {
         "Commander",
         "Viceroy"
     ],
-    # Nighthawk Military Police
     3497030: [
         "| HC | Chief Superintendent",
         "| HC | Deputy Chief",
@@ -94,7 +94,6 @@ perm_spectre_roles = {
         "| X | Administration",
         "| X | Viceroy"
     ],
-    # Nighthawk Reaper Battalion
     4734688: [
         "Arbiter",
         "Warden",
@@ -104,7 +103,6 @@ perm_spectre_roles = {
         "Administration",
         "Viceroy"
     ],
-    # Nighthawk Vanguards
     3612873: [
         "C | Council",
         "C | Consul",
@@ -118,12 +116,12 @@ perm_spectre_roles = {
 
 phantom_spectre_roles = {}
 
-def search_users(keyword):
+def search_users(session, keyword, use_countdown):
     print("-" * 40)
     url = f"https://users.roblox.com/v1/users/search?keyword={keyword}&limit=100"
-    response = requests.get(url)
+    response = make_request(session, url)
 
-    if response.status_code == 200:
+    if response:
         data = response.json()
         users = data.get('data', [])
         found_user = False
@@ -143,22 +141,22 @@ def search_users(keyword):
                     print(f"{user['name']} | Phantom Assigned")
                     is_target = True
 
-                fetch_user_groups(user['id'], user['name'], is_target)
+                fetch_user_groups(session, user['id'], user['name'], is_target, use_countdown)
                 break
 
         if not found_user:
             print(f"No exact match found for username: {keyword}")
-
     else:
-        print(f"Failed to retrieve users: {response.status_code}")
+        print(f"Failed to retrieve users.")
 
-def fetch_user_groups(user_id, username, is_target):
+def fetch_user_groups(session, user_id, username, is_target, use_countdown):
     url = f"https://groups.roblox.com/v1/users/{user_id}/groups/roles"
-    response = requests.get(url)
+    response = make_request(session, url)
 
-    if response.status_code == 200:
+    if response:
         data = response.json()
         groups = data.get('data', [])
+
         in_nighthawk_imperium = False
 
         for group in groups:
@@ -193,19 +191,42 @@ def fetch_user_groups(user_id, username, is_target):
             print(f"No target roles or groups of interest found for User ID {user_id}.")
     else:
         print(f"Failed to retrieve groups for User ID {user_id}: {response.status_code}")
+    if use_countdown:
+        countdown(60)
+
+def make_request(session, url):
+    response = session.get(url)
+    if response.status_code == 200:
+        return response
+    else:
+        print(f"Request failed with status code: {response.status_code}")
+        countdown(60)
+        return None
 
 def countdown(seconds):
+    print("=" * 40)
     for i in range(seconds, -1, -1):
         sys.stdout.write(f"\rCooldown: {i} seconds remaining ")
         sys.stdout.flush()
         time.sleep(1)
     print("\r")
-    print("=" * 40)
+
+def clear_terminal():
+    sys.stdout.write("\033[H\033[J")
+    sys.stdout.flush()
 
 if __name__ == "__main__":
+    session = requests.Session()
     print("=" * 40)
+    cookie = input("Enter .ROBLOSECURITY cookie (or leave blank to skip): ")
+    print("=" * 40)
+    use_countdown = not cookie
+    if cookie:
+        session.headers.update({'Cookie': f'.ROBLOSECURITY={cookie}'})
+        clear_terminal()
+        print("=" * 40)
+
     while True:
         search_term = input("Enter user: ")
-        search_users(search_term)
+        search_users(session, search_term, use_countdown)
         print("=" * 40)
-        countdown(60)
