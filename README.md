@@ -40,8 +40,10 @@ To find cookies for most Chrome/Chromium browsers, `F12/Ctrl + Shift + I > Appli
 
 I don’t plan to maintain this indefinitely, but you can easily keep it current by updating the users, groups, and role containers whenever the Spectre target board changes.
 
+**In the meantime, it would help me if you pinged me in the [Spectres Discord](https://discord.gg/zkXy3HbTKZ) server whenever the target board changes!**
+
 ---
 
-Yo dudes, Spectres is pretty chill. Maybe you could like, [join it or something](https://www.roblox.com/groups/4236314/Red-Cell-Spectres).
+Yo dudes, Spectres is pretty chill. Maybe you could like, [join it or something](https://discord.gg/zkXy3HbTKZ).
 
 [![Red Cell Spectre Icon](media/images/red-cell-spectre.png)](https://www.roblox.com/groups/4236314/Red-Cell-Spectres)
