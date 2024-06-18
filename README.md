@@ -2,6 +2,12 @@
 
 RBLX Targeter is a tool designed to identify whether a user is a Red Cell Spectre target in the Roblox roleplaying game, **The Grand Crossing**. It leverages the [Users](https://users.roblox.com/docs/index.html) and [Groups](https://groups.roblox.com/docs/index.html) web APIs to perform its checks.
 
+# Table of Contents
+
+- [Contributors](#contributors)
+- [Using the Tool](#using-the-tool)
+- [Updating the Tool](#updating-the-tool)
+
 ## Contributors
 
 <div style="display: inline-block; text-align: center;">
@@ -40,10 +46,10 @@ To find cookies for most Chrome/Chromium browsers, `F12/Ctrl + Shift + I > Appli
 
 I don’t plan to maintain this indefinitely, but you can easily keep it current by updating the users, groups, and role containers whenever the Spectre target board changes.
 
-You can also ping me whenever you notice the target board change!
+**In the meantime, it would help all of us if you pinged me in the [Spectres Discord](https://discord.gg/zkXy3HbTKZ) server whenever you see the target board change!**
 
 ---
 
-Yo dudes, Spectres is pretty chill. Maybe you could like, [join it or something](https://www.roblox.com/groups/4236314/Red-Cell-Spectres).
+Yo dudes, Spectres is pretty chill. Maybe you could like, [join it or something](https://discord.gg/zkXy3HbTKZ).
 
 [![Red Cell Spectre Icon](media/images/red-cell-spectre.png)](https://www.roblox.com/groups/4236314/Red-Cell-Spectres)
