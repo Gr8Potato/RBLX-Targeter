@@ -22,11 +22,11 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell Spectr
 
 ### Windows
 
-Download the [latest RBLX Targeter EXE](https://github.com/Gr8Potato/RBLX-Targeter/releases). All relevant dependencies and runtimes should be installed upon running the program.
+Download the [latest RBLX Targeter .exe](https://github.com/Gr8Potato/RBLX-Targeter/releases). All relevant dependencies and runtimes should be installed upon running the program.
 > [!NOTE]
-> Windows Defender WILL trigger upon attempting to run the program. This is because the hash isn't signed by Microsoft. Windows Defender should scan the program and function normally.
+> Windows Defender WILL trigger upon attempting to run the program. This is because the hash isn't signed by Microsoft. Windows Defender should scan the program and function normally, however you may need to remove the program from quarantine. If you do not trust the `.exe` file, continue reading.
 
-### Other Operating Systems
+### Alternative Installation Method
 
 You will need to install the Python `requests` package to use RBLX Targeter. Also, make sure you have Python installed on your system (I made this in version `3.12.3`).
 
