@@ -14,15 +14,18 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell Spectr
 
 ## Using the Tool
 
-### Windows
+### Installation Guide
 
-Download the [latest RBLX Targeter EXE](https://github.com/Gr8Potato/RBLX-Targeter/releases). All relevant dependencies and runtimes should be installed upon running the program.
+First, make sure you have Python installed on your system. I made this in version `3.12.3`, but Python is backwards compataible, so any version later than that will work. 
+
+You can download [the latest version of Python on their website](https://www.python.org/downloads/).
+
 > [!NOTE]
-> Windows Defender WILL trigger upon attempting to run the program. This is because the hash isn't signed by Microsoft. Windows Defender should scan the program and function normally.
+> Make sure you check off the PATH option, as shown in the image below.
 
-### Other Operating Systems
+![Python PATH Option Enabled](media/images/PythonPATH.png)
 
-You will need to install the Python `requests` package to use RBLX Targeter. Also, make sure you have Python installed on your system (I made this in version `3.12.3`).
+You will nalso eed to install the Python `requests` package to use RBLX Targeter. This can be done by executing command `pip install requests` in the terminal (Command Prompt, PowerShell, MacOS Terminal, etc).
 
 ### Providing a Cookie
 
@@ -31,14 +34,13 @@ You can optionally provide a cookie to bypass Roblox's strict API limits. You ca
 To find cookies for most Chrome/Chromium browsers, `F12/Ctrl + Shift + I > Application > Cookies > ...roblox.com...`.
 
 > [!NOTE]
-> You will need to get a new cookie each time you log out (i.e.: when the cookie expires).
-
-> [!WARNING]  
-> **DO NOT SHARE THIS COOKIE WITH OTHERS** (it tells you not to put it in the cookie).
+> You will need to get a new cookie each time you log out (i.e.: when the cookie expires). This includes `_|WARNING:-DO-NOT-SHARE...`
 
 ## Updating the Tool
 
 I don’t plan to maintain this indefinitely, but you can easily keep it current by updating the users, groups, and role containers whenever the Spectre target board changes.
+
+You can also ping me whenever you notice the target board change!
 
 ---
 
