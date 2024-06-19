@@ -54,6 +54,57 @@ I don’t plan to maintain this indefinitely, but you can easily keep it current
 
 **In the meantime, it would help all of us if you pinged me in the [Spectres Discord](https://discord.gg/zkXy3HbTKZ) server whenever you see the target board change!**
 
+## Output Sample
+The program runs entirely from the terminal. The output may be slightly different as the project carries on. This is taken from RBLX Target v2.0.
+```
+========================================
+Enter .ROBLOSECURITY cookie (or leave blank to skip):
+========================================
+Enter user: 
+Enter user: Gr8P0tat0
+----------------------------------------
+Username: Gr8P0tat0, DisplayName: Gr8Potato, Id: 291119265
+----------------------------------------
+SPECTRES
+XXXXXXXXXX
+
+RED CELL
+XXXXXXXXXX
+
+CHIMERA
+Nighthawk Commandos, Gr8P0tat0 | MUST BE IN MORPH!
+========================================
+Cooldown: 0 seconds remaining
+========================================
+Enter user: Ciphren
+----------------------------------------
+Username: Ciphren, DisplayName: Ciphren, Id: 68966801
+----------------------------------------
+SPECTRES
+Nighthawk Manticore, Ciphren | Phantom Assigned
+Nighthawk Manticore, Auxilior, Ciphren | Permanent Hit
+Nighthawk Military Police: Cerberus, | C | Council, Ciphren | Permanent Hit
+Nighthawk Imperial Peacekeeper Corps, Ciphren | Permanent Hit
+
+RED CELL
+Nighthawk Manticore, Ciphren
+Nighthawk Imperial Peacekeeper Corps, Ciphren
+
+CHIMERA
+Nighthawk Military Police: Cerberus, Ciphren | MUST BE IN MORPH!
+========================================
+Enter user: nokia3310achi
+----------------------------------------
+Username: nokia3310achi, DisplayName: 1AzOrion_02XL, Id: 888267834
+----------------------------------------
+nokia3310achi is not in The Nighthawk Imperium. Not a target. Are you sure you typed the name in correctly?
+========================================
+Enter user: thisusersimplydoesnotexist
+----------------------------------------
+No exact match found for username: thisusersimplydoesnotexist
+========================================
+```
+
 ---
 
 Yo dudes, Spectres is pretty chill. Maybe you could like, [join it or something](https://discord.gg/zkXy3HbTKZ).
