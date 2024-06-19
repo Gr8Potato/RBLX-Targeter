@@ -176,7 +176,6 @@ perm_red_cell_roles = {
         "Royal Officer"
     ],
     4486074: [ #Technically, Supreme Command is considered Captain-Major+, but I'm letting this slide because RC didn't know wtf it was either.
-        "| C | Council",
         "| C | Captain-Major",
         "| X | Chief Superintendent",
         "| X | Commandant",
