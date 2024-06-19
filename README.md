@@ -28,7 +28,7 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell, Chime
 
 ### Installation Guide
 
-First, make sure you have Python installed on your system. I made this in version `3.12.3`, but Python is backwards compataible, so any version later than that will work. 
+First, make sure you have Python installed on your system. I made this in version `3.12.3`, but Python is backward compatible, so any version later than that will work. 
 
 You can download [the latest version of Python on their website](https://www.python.org/downloads/).
 
@@ -37,7 +37,9 @@ You can download [the latest version of Python on their website](https://www.pyt
 
 ![Python PATH Option Enabled](media/images/PythonPATH.png)
 
-You will nalso eed to install the Python `requests` package to use RBLX Targeter. This can be done by executing command `pip install requests` in the terminal (Command Prompt, PowerShell, MacOS Terminal, etc).
+You will also need to install the Python `requests` package to use RBLX Targeter. This can be done by executing the command `pip install requests` in the terminal (Command Prompt, PowerShell, MacOS Terminal, etc).
+
+Once you've done that, find [the latest release](https://github.com/Gr8Potato/RBLX-Targeter/releases) and download the `targeter.py` file.
 
 ### Providing a Cookie
 
