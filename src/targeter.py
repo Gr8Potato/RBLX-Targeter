@@ -23,13 +23,36 @@ Roles: ID: Name(s)
 Morphs: ID: Name
 '''
 
+'''
+REFERENCE SHEET
+
+nighthawk_groups = {
+    "Nighthawk Combat Engineers": 4809530,
+    "Nighthawk Combat Engineers: Leviathan": 33391710,
+    "Nighthawk Commandos": 3496996,
+    "Nighthawk Commandos: Ghosts": 11000162,
+    "Nighthawk Guardians": 4183818,
+    "Nighthawk Imperial Peacekeeper Corps": 4543661,
+    "Nighthawk Imperium": 1174414,
+    "Nighthawk Integration Department": 8244715,
+    "Nighthawk Manticore": 15026315,
+    "Nighthawk Military Police": 3497030,
+    "Nighthawk Military Police: Cerberus": 4486074,
+    "Nighthawk Reaper Battalion": 4734688,
+    "Nighthawk Reaper Battalion: Black Daggers": 4936035,
+    "Nighthawk Royal Guards": 3497000,
+    "Nighthawk Vanguards": 3612873
+}
+'''
+
 # SPECTRES
-perm_spectre_targets = ["41uis", "Expiral", "daxlovescars", 'Acrynax', 'finalnickADD', 'Kurashina_lzumi', 'vTakina', 'Te0Void', 'Tim_NightShade', 'Caonalyst', 'snellejelte', 'Guy_Broman', 'ReiAstra', 'flem_sy', 'JBF3', 'KolegaPolakYT', 'Pieface1091']
+perm_spectre_targets = ["41uis", "Expiral", "daxlovescars", 'Acrynax', 'finalnickADD', 'Kurashina_lzumi', 'vTakina', 'Te0Void', 'Tim_NightShade', 'Caonalyst', 'snellejelte', 'Guy_Broman', 'ReiAstra', 'flem_sy', 'JBF3', 'KolegaPolakYT', 'Pieface1091'] #"All division directorate of The Nighthawk Imperium. 
+#> Currently LucarneHaven, rockstarmari, uhmrhino, Caonalyst, snellejelte, Guy_Broman, ReiAstra, flem_sy, JBF3, KolegaPolakYT, and Pieface1091."
 phantom_spectre_targets = ["RisenVezyr"]
 
 perm_spectre_groups = {
-    "Nighthawk Combat Engineers: Leviathan": 33391710,
-    "Nighthawk Imperial Peacekeeper Corps": 4543661
+    "Nighthawk Combat Engineers: Leviathan": 33391710, #"Any and all members of Leviathans."
+    "Nighthawk Imperial Peacekeeper Corps": 4543661 #"Imperial Peacekeeper Corps members."
 }
 
 phantom_spectre_groups = {
@@ -37,7 +60,7 @@ phantom_spectre_groups = {
 }
 
 perm_spectre_roles = {
-    4486074: [
+    4486074: [ #"Cerberus Drill Sergeant or higher"
         "| O | Drill Sergeant",
         "| O | Ultra",
         "| C | Council",
@@ -51,13 +74,17 @@ perm_spectre_roles = {
         "| X | Commander",
         "| X | Viceroy"
     ],
-    15026315: [
+    15026315: [ #"All Operatives of the Military Police Manticore."
+        "Probationary Member",
+        "Cadet",
+        "Agent",
         "Operative",
         "Senior Operative",
         "Elite",
         "Auxilior",
         "Zealot",
         "Kaidon",
+        "-",
         "Chief Superintendent",
         "Arbiter",
         "Deputy Chief",
@@ -65,7 +92,7 @@ perm_spectre_roles = {
         "Administration",
         "Viceroy"
     ],
-    1174414: [
+    1174414: [ #"TNI Commodore & TNI Admiralty."
         "| C | Commodore",
         "| HC | Admiral",
         "| HC | Arch Admiral",
@@ -73,16 +100,10 @@ perm_spectre_roles = {
         "| X | Commander",
         "| X | Viceroy"
     ],
-    3497000: [
-        "Royal Officer",
-        "High Command",
-        "Director",
-        "Overseer",
-        "Administration",
-        "Commander",
-        "Viceroy"
+    3497000: [ #"Royal Guard Royal Officers."
+        "Royal Officer"
     ],
-    4809530: [
+    4809530: [ #"TNI Division High Command within...CE Ordinatus..."
         "| HC | Ordinatus",
         "| HC | Praefectus",
         "| X | Fabricator-General",
@@ -90,7 +111,7 @@ perm_spectre_roles = {
         "| X | Administration",
         "| X | Viceroy"
     ],
-    3496996: [
+    3496996: [ #"TNI Division High Command within...CO Commandant..."
         "Commandant",
         "Advisor",
         "Deputy Director",
@@ -100,7 +121,7 @@ perm_spectre_roles = {
         "Commander",
         "Viceroy"
     ],
-    3497030: [
+    3497030: [ #"#"TNI Division High Command within...MP CSI...""
         "| HC | Chief Superintendent",
         "| HC | Deputy Chief",
         "| C | Chief",
@@ -109,7 +130,7 @@ perm_spectre_roles = {
         "| X | Administration",
         "| X | Viceroy"
     ],
-    4734688: [
+    4734688: [ #"TNI Division High Command within...NRB Arbiters..."
         "Arbiter",
         "Warden",
         "Director",
@@ -118,7 +139,7 @@ perm_spectre_roles = {
         "Administration",
         "Viceroy"
     ],
-    3612873: [
+    3612873: [ #"TNI Division High Command within...VG Councils..."
         "C | Council",
         "C | Consul",
         "Forerunner",
@@ -142,25 +163,41 @@ phantom_spectre_morphs = {
 bi_weekly_red_cell_targets = []
 
 perm_red_cell_groups = {
-    "Nighthawk Imperial Peacekeeper Corps": 4543661,
-    "Nighthawk Manticore": 15026315,
+    "Nighthawk Imperial Peacekeeper Corps": 4543661, #"Imperial Peacekeeper Corps members."
+    "Nighthawk Manticore": 15026315, #"Any and all Manticore Operatives"
 }
 
 bi_weekly_red_cell_groups = {
 }
 
-#TODO CERB AND BD, not sure what elite div hicoms are
+#TODO BD "Supreme Command"
 perm_red_cell_roles = {
-    3497000: [
-        "Royal Officer",
-        "High Command",
+    3497000: [ #"Royal Guard Officers"
+        "Royal Officer"
+    ],
+    4486074: [ #Technically, Supreme Command is considered Captain-Major+, but I'm letting this slide because RC didn't know wtf it was either.
+        "| C | Council",
+        "| C | Captain-Major",
+        "| X | Chief Superintendent",
+        "| X | Commandant",
+        "| X | Deputy Chief",
+        "| X | Chief",
+        "| X | Overseer",
+        "| X | Administration",
+        "| X | Commander",
+        "| X | Viceroy"
+    ],
+    4936035: [ #Confirmed via legomaster25182028 in Discord
+        "Imperator",
+        "Praefectus",
+        "General",
         "Director",
+        "Developer",
         "Overseer",
         "Administration",
-        "Commander",
         "Viceroy"
     ],
-    4809530: [
+    4809530: [ #"Combat Engineers Officers" & "TNI/Div High Command"
         "| O | Moderatus",
         "| O | Dominatus",
         "| O | Magos",
@@ -172,7 +209,7 @@ perm_red_cell_roles = {
         "| X | Administration",
         "| X | Viceroy"
     ],
-    3497030: [
+    3497030: [ #"Military Police Officers" & "TNI/Div High Command"
         "| H | Inspector",
         "| H | Superintendent",
         "| HC | Chief Superintendent",
@@ -184,7 +221,7 @@ perm_red_cell_roles = {
         "| X | Administration",
         "| X | Viceroy"
     ],
-        1174414: [
+        1174414: [ #"TNI/Div High Command"
         "| C | Commodore",
         "| HC | Admiral",
         "| HC | Arch Admiral",
@@ -192,15 +229,7 @@ perm_red_cell_roles = {
         "| X | Commander",
         "| X | Viceroy"
     ],
-    4809530: [
-        "| HC | Ordinatus",
-        "| HC | Praefectus",
-        "| X | Fabricator-General",
-        "| X | Overseer",
-        "| X | Administration",
-        "| X | Viceroy"
-    ],
-    3496996: [
+    3496996: [ #"TNI/Div High Command"
         "Commandant",
         "Advisor",
         "Deputy Director",
@@ -210,16 +239,7 @@ perm_red_cell_roles = {
         "Commander",
         "Viceroy"
     ],
-    3497030: [
-        "| HC | Chief Superintendent",
-        "| HC | Deputy Chief",
-        "| C | Chief",
-        "| X | Overseer",
-        "| X | Commander",
-        "| X | Administration",
-        "| X | Viceroy"
-    ],
-    4734688: [
+    4734688: [ #"TNI/Div High Command"
         "Arbiter",
         "Warden",
         "Director",
@@ -228,7 +248,7 @@ perm_red_cell_roles = {
         "Administration",
         "Viceroy"
     ],
-    3612873: [
+    3612873: [ #"TNI/Div High Command"
         "C | Council",
         "C | Consul",
         "Forerunner",
@@ -236,11 +256,11 @@ perm_red_cell_roles = {
         "Administration",
         "Commander",
         "Viceroy"
-    ]
+    ],
 }
 
 bi_weekly_red_cell_roles = {
-    3497000: [
+    3497000: [ #"Weekly Operation: "Spears for me, you, and him?":"
         "Trial",
         "Knight",
         "Vindicator",
@@ -254,7 +274,7 @@ bi_weekly_red_cell_roles = {
         "Commander",
         "Viceroy"
     ],
-    1174414: [
+    1174414: [ #"Weekly Operation: "Spears for me, you, and him?":"
         "| HC | Admiral",
         "| HC | Arch Admiral",
         "| X | Supreme Admiral",
@@ -267,13 +287,13 @@ red_cell_morphs = {
 }
 
 # CHIMERA
-weekly_chimera_targets = ["lam919", "DeadlyCraytos", "Rostrer", "bruhther789", "ReiAstra"]
+weekly_chimera_targets = ["lam919", "DeadlyCraytos", "Rostrer", "bruhther789", "ReiAstra"] #"Individual hits...HIGH VALUE TARGET...ReiAstra"
 
 weekly_chimera_groups = {
 }
 
 weekly_chimera_roles = {
-    1174414: [ #I know it says "admiral" specifically, but im giving myself leeway on this one
+    1174414: [ #HIGH VALUE TARGET...Admiral --> I know it says "admiral" specifically, but im giving myself leeway on this one
         "| HC | Admiral",
         "| HC | Arch Admiral",
         "| X | Supreme Admiral",
@@ -283,8 +303,8 @@ weekly_chimera_roles = {
 }
 
 chimera_morphs = {
-    "Nighthawk Military Police: Cerberus": 4486074,
-    "Nighthawk Commandos": 3496996
+    "Nighthawk Military Police: Cerberus": 4486074, #Morph extermination...
+    "Nighthawk Commandos": 3496996 #Morph extermination...
 }
 
 def search_users(session, keyword, use_countdown):
