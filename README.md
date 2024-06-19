@@ -7,6 +7,7 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell, Chime
 - [Contributors](#contributors)
 - [Using the Tool](#using-the-tool)
 - [Updating the Tool](#updating-the-tool)
+- [Output Sample](#output-sample)
 
 ## Contributors
 
@@ -28,7 +29,7 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell, Chime
 
 ### Installation Guide
 
-First, make sure you have Python installed on your system. I made this in version `3.12.3`, but Python is backwards compataible, so any version later than that will work. 
+First, make sure you have Python installed on your system. I made this in version `3.12.3`, but Python is backward compatible, so any version later than that will work. 
 
 You can download [the latest version of Python on their website](https://www.python.org/downloads/).
 
@@ -37,7 +38,9 @@ You can download [the latest version of Python on their website](https://www.pyt
 
 ![Python PATH Option Enabled](media/images/PythonPATH.png)
 
-You will nalso eed to install the Python `requests` package to use RBLX Targeter. This can be done by executing command `pip install requests` in the terminal (Command Prompt, PowerShell, MacOS Terminal, etc).
+You will also need to install the Python `requests` package to use RBLX Targeter. This can be done by executing the command `pip install requests` in the terminal (Command Prompt, PowerShell, MacOS Terminal, etc).
+
+Once you've done that, find [the latest release](https://github.com/Gr8Potato/RBLX-Targeter/releases) and download the `targeter.py` file.
 
 ### Providing a Cookie
 
@@ -53,6 +56,63 @@ To find cookies for most Chrome/Chromium browsers, `F12/Ctrl + Shift + I > Appli
 I don’t plan to maintain this indefinitely, but you can easily keep it current by updating the users, groups, and role containers whenever the Spectre target board changes.
 
 **In the meantime, it would help all of us if you pinged me in the [Spectres Discord](https://discord.gg/zkXy3HbTKZ) server whenever you see the target board change!**
+
+## Output Sample
+The program runs entirely from the terminal. The output may be slightly different as the project carries on. This is taken from RBLX Target v2.0.
+```
+========================================
+Enter .ROBLOSECURITY cookie (or leave blank to skip):
+========================================
+Enter user: 
+Enter user: Gr8P0tat0
+----------------------------------------
+Username: Gr8P0tat0, DisplayName: Gr8Potato, Id: 291119265
+----------------------------------------
+SPECTRES
+XXXXXXXXXX
+
+RED CELL
+XXXXXXXXXX
+
+CHIMERA
+Nighthawk Commandos, Gr8P0tat0 | MUST BE IN MORPH!
+========================================
+Cooldown: 0 seconds remaining
+========================================
+Enter user: Ciphren
+----------------------------------------
+Username: Ciphren, DisplayName: Ciphren, Id: 68966801
+----------------------------------------
+SPECTRES
+Nighthawk Manticore, Ciphren | Phantom Assigned
+Nighthawk Manticore, Auxilior, Ciphren | Permanent Hit
+Nighthawk Military Police: Cerberus, | C | Council, Ciphren | Permanent Hit
+Nighthawk Imperial Peacekeeper Corps, Ciphren | Permanent Hit
+
+RED CELL
+Nighthawk Manticore, Ciphren
+Nighthawk Imperial Peacekeeper Corps, Ciphren
+
+CHIMERA
+Nighthawk Military Police: Cerberus, Ciphren | MUST BE IN MORPH!
+========================================
+Enter user: MeowTentatioNN
+----------------------------------------
+Username: MeowTentatioNN, DisplayName: Furball, Id: 871501766
+----------------------------------------
+MeowTentatioNN is not a target in any group.
+========================================
+Enter user: nokia3310achi
+----------------------------------------
+Username: nokia3310achi, DisplayName: 1AzOrion_02XL, Id: 888267834
+----------------------------------------
+nokia3310achi is not in The Nighthawk Imperium. Not a target. Are you sure you typed the name in correctly?
+========================================
+Enter user: thisusersimplydoesnotexist
+----------------------------------------
+No exact match found for username: thisusersimplydoesnotexist
+========================================
+```
 
 ---
 
