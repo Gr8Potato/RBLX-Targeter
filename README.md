@@ -7,6 +7,7 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell, Chime
 - [Contributors](#contributors)
 - [Using the Tool](#using-the-tool)
 - [Updating the Tool](#updating-the-tool)
+- [Output Sample](#output-sample)
 
 ## Contributors
 
