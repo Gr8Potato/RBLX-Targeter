@@ -444,25 +444,28 @@ def fetch_user_groups(session, user_id, username, use_countdown):
 
         if not in_nighthawk_imperium:
             print(f"{username} is not in The Nighthawk Imperium. Not a target. Are you sure you typed the name in correctly?")
+        else:
+            if not spectre_found and not red_cell_found and not chimera_found:
+                print(f"{username} is not a target in any group.")
+            else: 
+                if not spectre_found:
+                    spectre_output.append("XXXXXXXXXX")
+                if not red_cell_found:
+                    red_cell_output.append("XXXXXXXXXX")
+                if not chimera_found:
+                    chimera_output.append("XXXXXXXXXX")
 
-        if not spectre_found:
-            spectre_output.append("XXXXXXXXXX")
-        if not red_cell_found:
-            red_cell_output.append("XXXXXXXXXX")
-        if not chimera_found:
-            chimera_output.append("XXXXXXXXXX")
+                print("SPECTRES")
+                for item in spectre_output:
+                    print(item)
 
-        print("SPECTRES")
-        for item in spectre_output:
-            print(item)
+                print("\nRED CELL")
+                for item in red_cell_output:
+                    print(item)
 
-        print("\nRED CELL")
-        for item in red_cell_output:
-            print(item)
-
-        print("\nCHIMERA")
-        for item in chimera_output:
-            print(item)
+                print("\nCHIMERA")
+                for item in chimera_output:
+                    print(item)
     else:
         print(f"Failed to retrieve groups for User ID {user_id}: {response.status_code}")
     
