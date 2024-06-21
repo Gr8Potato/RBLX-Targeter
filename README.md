@@ -63,7 +63,6 @@ The program runs entirely from the terminal. The output may be slightly differen
 ========================================
 Enter .ROBLOSECURITY cookie (or leave blank to skip):
 ========================================
-Enter user: 
 Enter user: Gr8P0tat0
 ----------------------------------------
 Username: Gr8P0tat0, DisplayName: Gr8Potato, Id: 291119265
