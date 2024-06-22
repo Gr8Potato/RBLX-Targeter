@@ -11,7 +11,7 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell, Chime
 
 ## NOTICE: I am no longer updating the project. That doesn't mean you can't (it's not as hard as you think trust me)!
 
-I've been permantely banned from The Grand Crossing (TGC) due to multiple successful attempts on multiple members of the Imperial Peacekeeper Corps (IPC) involving the use of illegal combos [(if you're curious to see the final straw, here you go.)](https://medal.tv/games/roblox/clips/i7lk3vjofO8_7zzOh/d1337mqpfOev?invite=cr-MSx1eTMsMjM5MTk3NTM2LA) As a result, I do not intend on further updating the tool.
+I've been permantely banned from The Grand Crossing (TGC) due to multiple successful attempts on multiple members of the Imperial Peacekeeper Corps (IPC) involving the use of illegal combos [(if you're curious to see the final straw, here you go)](https://medal.tv/games/roblox/clips/i7lk3vjofO8_7zzOh/d1337mqpfOev?invite=cr-MSx1eTMsMjM5MTk3NTM2LA). As a result, I do not intend on further updating the tool.
 
 Having said that, that does not mean you can't!
 
@@ -63,7 +63,7 @@ If you're interested in maintaining the tool, feel free to reach out to me on Di
 
 To give a short summary, you'll primarily be working with the [`TNI-ranks.txt`](https://github.com/Gr8Potato/RBLX-Targeter/blob/main/media/documents/TNI-ranks.txt) document and, of course, the [`targeter.py`](https://github.com/Gr8Potato/RBLX-Targeter/blob/main/src/targeter.py) file. The text file is just for reference. As high command, officer, etc. targets get added to the target board, you'll need to know the ranks that count as a valid target. That's where that file comes in handy.
 
-From there, you'll want to edit the relavent Python containers to accurately reflect the Chimera, Red Cell, and/or Spectre target boards. If you don't know what a Python container is, [here is a short read from one of my former professor's textbooks.](https://www.softcover.io/read/92780ad5/python_book/containers) Now that you know what that is, the containers you'll be editing often are `perm_spectre_targets`, `perm_spectre_targets`, `phantom_spectre_groups`...`weekly_chimera_roles`, `chimera_morphs`, you get the idea. Pattern recognition should kick in, allowing you to fill in the rest.
+From there, you'll want to edit the relavent Python containers to accurately reflect the Chimera, Red Cell, and/or Spectre target boards. If you don't know what a Python container is, [here is a short read from one of my former professor's textbooks](https://www.softcover.io/read/92780ad5/python_book/containers). Now that you know what that is, the containers you'll be editing often are `perm_spectre_targets`, `perm_spectre_targets`, `phantom_spectre_groups`...`weekly_chimera_roles`, `chimera_morphs`, you get the idea. Pattern recognition should kick in, allowing you to fill in the rest.
 
 ## Output Sample
 The program runs entirely from the terminal. The output may be slightly different as the project carries on. This is taken from RBLX Target v2.0.
