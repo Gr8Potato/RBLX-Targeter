@@ -11,7 +11,7 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell, Chime
 
 ## NOTICE: I am no longer updating the project. That doesn't mean you can't (it's not as hard as you think trust me)!
 
-I've been permantely banned from The Grand Crossing (TGC) due to multiple successful attempts on multiple members of the Imperial Peacekeeper Corps (IPC) involving the use of illegal combos [(if you're curious to see the final straw, here you go)](https://medal.tv/games/roblox/clips/i7lk3vjofO8_7zzOh/d1337mqpfOev?invite=cr-MSx1eTMsMjM5MTk3NTM2LA). As a result, I do not intend on further updating the tool.
+I've been permantely banned from The Grand Crossing. As a result, I do not intend on further updating the tool.
 
 Having said that, that does not mean you can't!
 
