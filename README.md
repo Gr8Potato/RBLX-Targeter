@@ -9,14 +9,6 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell, Chime
 - [Updating the Tool](#updating-the-tool)
 - [Output Sample](#output-sample)
 
-## NOTICE: I am no longer updating the project. That doesn't mean you can't (it's not as hard as you think trust me)!
-
-Unfortunately, I've been unfairly banned from The Grand Crossing. As a result, I do not intend on further updating the tool.
-
-Having said that, that does not mean you can't!
-
-It's a bit of of a read, but I provide some guidance in the **[Updating the Tool](#updating-the-tool)** section.
-
 ## Contributors
 
 <table>
@@ -59,9 +51,9 @@ To find cookies for most Chrome/Chromium browsers, `F12/Ctrl + Shift + I > Appli
 
 ## Updating the Tool
 
-If you're interested in maintaining the tool, feel free to reach out to me on Discord (`Gr8Potato`). I can add you as a contributor to the project, and you can make your own edits to the repo (if you mess something up, we can always revert it)!
+If you're interested in maintaining the tool, feel free to reach out to me on Discord (`Gr8Potato`). I can make the necessary updates if I feel like it. I can also add you as a contributor to the project, and you can make your own edits to the repo (if you mess something up, we can always revert it)!
 
-To give a short summary, you'll primarily be working with the [`TNI-ranks.txt`](https://github.com/Gr8Potato/RBLX-Targeter/blob/main/media/documents/TNI-ranks.txt) document and, of course, the [`targeter.py`](https://github.com/Gr8Potato/RBLX-Targeter/blob/main/src/targeter.py) file. The text file is just for reference. As high command, officer, etc. targets get added to the target board, you'll need to know the ranks that count as a valid target. That's where that file comes in handy.
+To give a short summary for the latter, you'll primarily be working with the [`TNI-ranks.txt`](https://github.com/Gr8Potato/RBLX-Targeter/blob/main/media/documents/TNI-ranks.txt) document and, of course, the [`targeter.py`](https://github.com/Gr8Potato/RBLX-Targeter/blob/main/src/targeter.py) file. The text file is just for reference. As high command, officer, etc. targets get added to the target board, you'll need to know the ranks that count as a valid target. That's where that file comes in handy.
 
 From there, you'll want to edit the relavent Python containers to accurately reflect the Chimera, Red Cell, and/or Spectre target boards. If you don't know what a Python container is, [here is a short read from one of my former professor's textbooks](https://www.softcover.io/read/92780ad5/python_book/containers). Now that you know what that is, the containers you'll be editing often are `perm_spectre_targets`, `perm_spectre_targets`, `phantom_spectre_groups`...`weekly_chimera_roles`, `chimera_morphs`, you get the idea. Pattern recognition should kick in, allowing you to fill in the rest.
 
