@@ -432,11 +432,11 @@ def fetch_user_groups(session, user_id, username, use_countdown):
 
             # some chimera and red cell targets can only be redeemed if they're in morph
             if group_id in red_cell_morphs.values():
-                red_cell_output.append(f"{group_name}, {username} | RED CELL - MUST BE IN MORPH!")
+                red_cell_output.append(f"{group_name}, {username} | MUST BE IN MORPH!")
                 red_cell_found = True
 
             if group_id in chimera_morphs.values():
-                chimera_output.append(f"{group_name}, {username} | CHIMERA - MUST BE IN MORPH!")
+                chimera_output.append(f"{group_name}, {username} | MUST BE IN MORPH!")
                 chimera_found = True
 
             if group_id in perm_spectre_morphs.values():
