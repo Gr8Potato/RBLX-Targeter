@@ -1,7 +1,7 @@
 '''
 ======================
 By: Gr8P0tat0
-Last Modified: 17JUN24
+Last Modified: 24JUL24
 ======================
 LEGAL NOTICE: ANY SIGNIFICANT
 INSPIRATION/ALTERCATIONS OF
@@ -23,32 +23,15 @@ Roles: ID: Name(s)
 Morphs: ID: Name
 '''
 
-'''
-REFERENCE SHEET
-
-nighthawk_groups = {
-    "Nighthawk Combat Engineers": 4809530,
-    "Nighthawk Combat Engineers: Leviathan": 33391710,
-    "Nighthawk Commandos": 3496996,
-    "Nighthawk Commandos: Ghosts": 11000162,
-    "Nighthawk Guardians": 4183818,
-    "Nighthawk Imperial Peacekeeper Corps": 4543661,
-    "Nighthawk Imperium": 1174414,
-    "Nighthawk Integration Department": 8244715,
-    "Nighthawk Manticore": 15026315,
-    "Nighthawk Military Police": 3497030,
-    "Nighthawk Military Police: Cerberus": 4486074,
-    "Nighthawk Reaper Battalion": 4734688,
-    "Nighthawk Reaper Battalion: Black Daggers": 4936035,
-    "Nighthawk Royal Guards": 3497000,
-    "Nighthawk Vanguards": 3612873
-}
-'''
-
 # SPECTRES
 perm_spectre_targets = ["41uis", "Expiral", "daxlovescars", 'Acrynax', 'finalnickADD', 'Kurashina_lzumi', 'vTakina', 'Te0Void', 'Tim_NightShade', 'Caonalyst', 'snellejelte', 'Guy_Broman', 'ReiAstra', 'flem_sy', 'JBF3', 'KolegaPolakYT', 'Pieface1091'] #"All division directorate of The Nighthawk Imperium. 
 #> Currently LucarneHaven, rockstarmari, uhmrhino, Caonalyst, snellejelte, Guy_Broman, ReiAstra, flem_sy, JBF3, KolegaPolakYT, and Pieface1091."
-phantom_spectre_targets = ["RisenVezyr"]
+
+phantom_spectre_targets = ["RisenVezyr", "Kytezian"]
+
+spectres_directorate_targets = []
+
+rc_supreme_command_targets = []
 
 perm_spectre_groups = {
     "Nighthawk Combat Engineers: Leviathan": 33391710, #"Any and all members of Leviathans."
@@ -57,6 +40,14 @@ perm_spectre_groups = {
 
 phantom_spectre_groups = {
     "Nighthawk Manticore": 15026315
+}
+
+spectres_directorate_groups = {
+    "Nighthawk Imperial Peacekeeper Corps": 4543661
+}
+
+rc_supreme_command_groups = {
+
 }
 
 perm_spectre_roles = {
@@ -153,10 +144,26 @@ perm_spectre_roles = {
 phantom_spectre_roles = {
 }
 
+spectres_directorate_roles = {
+    
+}
+
+rc_supreme_command_roles = {
+
+}
+
 perm_spectre_morphs = {
 }
 
 phantom_spectre_morphs = {
+}
+
+spectres_directorate_morphs = {
+
+}
+
+rc_supreme_command_morphs = {
+
 }
 
 # RED CELL
@@ -170,7 +177,6 @@ perm_red_cell_groups = {
 bi_weekly_red_cell_groups = {
 }
 
-#TODO BD "Supreme Command"
 perm_red_cell_roles = {
     3497000: [ #"Royal Guard Officers"
         "Royal Officer"
@@ -259,46 +265,21 @@ perm_red_cell_roles = {
 }
 
 bi_weekly_red_cell_roles = {
-    3497000: [ #"Weekly Operation: "Spears for me, you, and him?":"
-        "Trial",
-        "Knight",
-        "Vindicator",
-        "Sentinel",
-        "Champion",
-        "Royal Officer",
-        "High Command",
-        "Director",
-        "Overseer",
-        "Administration",
-        "Commander",
-        "Viceroy"
-    ],
-    1174414: [ #"Weekly Operation: "Spears for me, you, and him?":"
-        "| HC | Admiral",
-        "| HC | Arch Admiral",
-        "| X | Supreme Admiral",
-        "| X | Commander",
-        "| X | Viceroy"
-    ],
+
 }
 
 red_cell_morphs = {
+
 }
 
 # CHIMERA
-weekly_chimera_targets = ["lam919", "DeadlyCraytos", "Rostrer", "bruhther789", "ReiAstra"] #"Individual hits...HIGH VALUE TARGET...ReiAstra"
+weekly_chimera_targets = ["BONBONSWEETS02", "leon321abc", "ANIMALFACT", "DevMike0", "Feniksaen"] # Individual hits + high target
 
 weekly_chimera_groups = {
 }
 
 weekly_chimera_roles = {
-    1174414: [ #HIGH VALUE TARGET...Admiral --> I know it says "admiral" specifically, but im giving myself leeway on this one
-        "| HC | Admiral",
-        "| HC | Arch Admiral",
-        "| X | Supreme Admiral",
-        "| X | Commander",
-        "| X | Viceroy"
-    ]
+
 }
 
 chimera_morphs = {
@@ -358,7 +339,15 @@ def fetch_user_groups(session, user_id, username, use_countdown):
             spectre_output.append(f"{username} | Phantom Assigned")
             spectre_found = True
 
-        #NOTE: Only spectres need to differentiate perm hit and phantom assigned because the number of hits you need for each reward are different
+        if username.lower() in [u.lower() for u in spectres_directorate_targets]:
+            spectre_output.append(f"{username} | Spectres Directorate Assigned")
+            spectre_found = True
+
+        if username.lower() in [u.lower() for u in rc_supreme_command_targets]:
+            spectre_output.append(f"{username} | RC Supreme Command Assigned")
+            spectre_output = True
+
+        #NOTE: Only spectres need to differentiate perm hit, phantom assigned, etc. because the number of hits you need for each reward are different
 
         # red cell user check (only needed for bi since perm is group/group+role based)
         if username.lower() in [u.lower() for u in bi_weekly_red_cell_targets]:
@@ -388,6 +377,14 @@ def fetch_user_groups(session, user_id, username, use_countdown):
                 spectre_output.append(f"{group_name}, {username} | Phantom Assigned")
                 spectre_found = True
 
+            if group_id in spectres_directorate_groups.values():
+                spectre_output.append(f"{group_name}, {username} | Spectres Directorate Assigned")
+                spectre_found = True
+
+            if group_id in rc_supreme_command_groups.values():
+                spectre_output.append(f"{group_name}, {username} | RC Supreme Command Assigned")
+                spectre_found = True
+
             #red cell groups check
             if group_id in perm_red_cell_groups.values():
                 red_cell_output.append(f"{group_name}, {username}")
@@ -411,6 +408,14 @@ def fetch_user_groups(session, user_id, username, use_countdown):
                 spectre_output.append(f"{group_name}, {role_name}, {username} | Phantom Assigned")
                 spectre_found = True
 
+            if group_id in spectres_directorate_roles and role_name in spectres_directorate_roles[group_id]:
+                spectre_output.append(f"{group_name}, {role_name}, {username} | Spectres Directorate Assigned")
+                spectre_found = True
+
+            if group_id in rc_supreme_command_roles and role_name in rc_supreme_command_roles[group_id]:
+                spectre_output.append(f"{group_name}, {role_name}, {username} | RC Supreme Command Assigned")
+                spectre_found = True
+
             # red cell group + role check
             if group_id in perm_red_cell_roles and role_name in perm_red_cell_roles[group_id]:
                 red_cell_output.append(f"{group_name}, {role_name}, {username}")
@@ -427,19 +432,27 @@ def fetch_user_groups(session, user_id, username, use_countdown):
 
             # some chimera and red cell targets can only be redeemed if they're in morph
             if group_id in red_cell_morphs.values():
-                red_cell_output.append(f"{group_name}, {username} | MUST BE IN MORPH!")
+                red_cell_output.append(f"{group_name}, {username} | RED CELL - MUST BE IN MORPH!")
                 red_cell_found = True
 
             if group_id in chimera_morphs.values():
-                chimera_output.append(f"{group_name}, {username} | MUST BE IN MORPH!")
+                chimera_output.append(f"{group_name}, {username} | CHIMERA - MUST BE IN MORPH!")
                 chimera_found = True
 
             if group_id in perm_spectre_morphs.values():
-                spectre_output.append(f"{group_name}, {username} | MUST BE IN MORPH!")
+                spectre_output.append(f"{group_name}, {username} | SPECTRE - MUST BE IN MORPH!")
                 spectre_found = True
 
             if group_id in phantom_spectre_morphs.values():
-                spectre_output.append(f"{group_name}, {username} | MUST BE IN MORPH!")
+                spectre_output.append(f"{group_name}, {username} | SPECTRE PHAMTOM - MUST BE IN MORPH!")
+                spectre_found = True
+
+            if group_id in spectres_directorate_morphs.values():
+                spectre_output.append(f"{group_name}, {username} | SPECTRE DIRECTORATE - MUST BE IN MORPH!")
+                spectre_found = True
+
+            if group_id in rc_supreme_command_morphs.values():
+                spectre_output.append(f"{group_name}, {username} | SPECTRE RC SUPREME COMMAND - MUST BE IN MORPH!")
                 spectre_found = True
 
         if not in_nighthawk_imperium:
