@@ -51,7 +51,7 @@ To find cookies for most Chrome/Chromium browsers, `F12/Ctrl + Shift + I > Appli
 
 ## Updating the Tool
 
-If you're interested in maintaining the tool, feel free to reach out to me on Discord (`Gr8Potato`). I can also add you as a contributor to the project, and you can make your own edits to the repo (if you mess something up, we can always revert it)!
+If you're interested in maintaining the tool, feel free to reach out to me on Discord (`Gr8Potato`). I can make the necessary updates if I feel like it. I can also add you as a contributor to the project, and you can make your own edits to the repo (if you mess something up, we can always revert it)!
 
 To give a short summary for the latter, you'll primarily be working with the [`TNI-ranks.txt`](https://github.com/Gr8Potato/RBLX-Targeter/blob/main/media/documents/TNI-ranks.txt) document and, of course, the [`targeter.py`](https://github.com/Gr8Potato/RBLX-Targeter/blob/main/src/targeter.py) file. The text file is just for reference. As high command, officer, etc. targets get added to the target board, you'll need to know the ranks that count as a valid target. That's where that file comes in handy.
 
