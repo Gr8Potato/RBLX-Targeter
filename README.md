@@ -4,24 +4,9 @@ RBLX Targeter is a tool designed to identify whether a user is a Red Cell, Chime
 
 # Table of Contents
 
-- [Contributors](#contributors)
 - [Using the Tool](#using-the-tool)
 - [Updating the Tool](#updating-the-tool)
 - [Output Sample](#output-sample)
-
-## Contributors
-
-<table>
-  <tr>
-    <td style="text-align: center;">
-      <a href="https://www.roblox.com/users/291119265/profile">
-        <img src="media/images/Gr8P0tat0.png" alt="Gr8P0tat0 Profile Icon">
-      </a>
-      <br>
-      <strong>Gr8P0tat0</strong>
-    </td>
-  </tr>
-</table>
 
 ## Using the Tool
 
